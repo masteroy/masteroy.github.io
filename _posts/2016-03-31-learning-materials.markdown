@@ -13,7 +13,7 @@ AngularJS:
 
 1. [Learn AngularJS][learn-angularjs]
 
-Unit Test:
+Unit Testing:
 
 1. The Art of Unit Testing, 2nd Edition
 
