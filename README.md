@@ -1,2 +1,0 @@
-# masteroy.github.io
-Welcome!
