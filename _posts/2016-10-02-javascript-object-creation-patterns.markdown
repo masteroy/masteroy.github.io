@@ -2,7 +2,7 @@
 layout: post
 title:  "JavaScript Object Creation Patterns"
 date:   2016-10-02 13:0:0 +0700
-categories: C#
+categories: JavaScript
 ---
 
 I'm reading *Professional JavaScript for Web* recently. It's really good, and I'm impressed by the contents of object creation patterns.
