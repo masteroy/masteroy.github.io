@@ -112,7 +112,9 @@ Aha! It is what Prototype Chaining exactly is. Prototype Chaining is an importan
 Cons:
 
 * When implementing inheritance using prototypes, the prototype actually becomes an instance of another type, meaning that what once were instance properties are now prototype properties. (**property** in **SubType** once were **SuperType** instance property, but now are **SubType** prototype property now, and **property** is shared by all **SubType** instances)
+
 ![9](/assets/javascript-inheritance-9.png)
+
 * You cannot pass arguments into the **supertype** constructor when the **subtype** instance is being created.
 
 ***
@@ -139,7 +141,9 @@ alert(instance2.colors); //"red,blue,green"
 ~~~
 
 By using the call() method (or alternately, apply()), the **SuperType** constructor is called in the context of the newly created instance of **SubType**.
+
 ![10](/assets/javascript-inheritance-10.png)
+
 Notice that, the instance of **SubType** is not an instance of **SuperType**.
 
 ~~~ javascript
@@ -249,6 +253,7 @@ alert(person.friends); //"Shelby,Court,Van,Rob,Barbie"
 The code above made me quite confused at first. I think **anotherPerson** and **yetAnotherPerson** share the same properties with **person**, because **name** and **friends** can be found in the prototype chain scope. But I was wrong, and I found an awesome article which can solve my problems: [JavaScript Prototypal Inheritance][why-is-it-necessary-to-set-the-prototype-constructor]
 
 So, the prototype chain looks like this:
+
 ![12](/assets/javascript-inheritance-12.png)
 
 ECMAScript 5 formalized the concept of *prototypal inheritance* by adding the **Object.create()** method. So the code can be simplified:
@@ -322,6 +327,7 @@ Cons:
 *Combination Inheritance* is the most often-used pattern for inheritance but it has its own inefficiencies. The most inefficient part of the pattern is that the supertype constructor is always called twice: once to create the subtype’s prototype, and once inside the subtype constructor.
 
 Consider the previous *Combination Inheritance* example:
+
 ![11](/assets/javascript-inheritance-11.png)
 
 As you can see, there are two sets of **name** and **colors** properties: one on the instance and one on the **SubType prototype**. This is the result of calling the **SuperType constructor** twice.
